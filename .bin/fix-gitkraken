@@ -1,0 +1,10 @@
+#!/bin/bash
+
+os=$(uname)
+
+if [[ $os == "Darwin" ]]; then
+    echo "Removing GitKraken signature"
+    codesign --remove-signature /Applications/GitKraken.app/Contents/Frameworks/GitKraken\ Helper\ \(Renderer\).app
+else
+    echo "Unsupported platform: $os"
+fi
