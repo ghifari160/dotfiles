@@ -1,0 +1,11 @@
+#!/bin/bash
+
+os=`uname`
+
+if [[ $os == "Darwin" ]]; then
+    echo "Flushing DNS in macOS"
+    sudo killall -HUP mDNSResponder
+    echo "DNS Flushed!"
+else
+    echo "Unsupported platform: $os"
+fi

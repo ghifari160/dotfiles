@@ -1,0 +1,18 @@
+[user]
+	email = ghifari@ghifari160.com
+	name = GHIFARI160
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = code --wait
+[hub]
+	protocol = https
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"

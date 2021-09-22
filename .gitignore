@@ -1,0 +1,7 @@
+.aws/
+.b2_account_info
+.bash_history
+.dotfiles.git
+.histfile
+.kube/config
+.ssh/known_hosts
