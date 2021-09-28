@@ -38,3 +38,11 @@ export KUBE_EDITOR="code -w"
 
 # Dotfiles
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
+
+# asciinema recording
+alias asciirec="ASCIINEMA_REC=1 asciinema rec $@"
+
+# If recording
+if [[ $ASCIINEMA_REC ]]; then
+    export PS1="%~ $ "
+fi
