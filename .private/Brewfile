@@ -1,0 +1,15 @@
+# YubiKey Manager
+brew "ykman"
+
+# GPG
+brew "gnupg"
+brew "pinentry-mac"
+
+# Git
+brew "git"
+brew "git-lfs"
+
+brew "mas"
+
+# Yubico Authenticator
+# mas "Yubico Authenticator", id: 1497506650
