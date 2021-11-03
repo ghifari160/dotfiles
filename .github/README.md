@@ -2,6 +2,12 @@
 
 [GHFIFARI160](https://github.com/ghifari160)'s dotfiles.
 
+## Caveats
+
+MAS commands in [`Brewfile`](../Brewfile) and [`.private/Brewfile`](../.private/Brewfile) has been disabled.
+MAS is not _yet_ functional in macOS Monterey.
+See [mas-cli/mas#417](https://github.com/mas-cli/mas/issues/417).
+
 ## Cheatsheet
 
 ``` shell
