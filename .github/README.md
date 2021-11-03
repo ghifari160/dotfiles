@@ -21,4 +21,7 @@ git clone --bare git@github.com:ghifari160/dotfiles.git ~/.dotfiles.git
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
 dotfiles checkout
+
+# macOS Terminal
+open Ghi.terminal && defaults write com.apple.terminal "Default Window Settings" "Ghi" && defaults write com.apple.terminal "Startup Window Settings" "Ghi" && killall Terminal
 ```
