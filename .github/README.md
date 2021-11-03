@@ -1,6 +1,6 @@
 # GHIFARI160's dotfiles
 
-[GHFIFARI160](https://github.com/ghifari160)'s dotfiles.
+[GHIFARI160](https://github.com/ghifari160)'s dotfiles.
 
 ## Caveats
 
@@ -11,6 +11,12 @@ See [mas-cli/mas#417](https://github.com/mas-cli/mas/issues/417).
 ## Cheatsheet
 
 ``` shell
+# Brewfile
+curl -o $HOME/Brewfile -fsSL https://raw.githubusercontent.com/Ghifari160/dotfiles/main/.private/Brewfile
+brew bundle install
+rm -f Brewfile.lock.json
+
+# dotfiles
 git clone --bare git@github.com:ghifari160/dotfiles.git ~/.dotfiles.git
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
