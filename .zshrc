@@ -1,5 +1,5 @@
-export PS1="%~ %n$ "
-export RPROMPT="%t"
+export PS1="%F{111}%~ %n$%f "
+export RPROMPT="%F{111}%t%f"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
