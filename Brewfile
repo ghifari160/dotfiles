@@ -19,6 +19,7 @@ brew "mas"
 # Official Tap
 brew "adns"
 brew "asciinema"
+brew "bat"
 brew "cmake"
 brew "doctl"
 brew "ffmpeg"
