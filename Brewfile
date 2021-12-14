@@ -81,7 +81,7 @@ tap "homebrew/cask-drivers"
 # Casks
 cask "adobe-creative-cloud"
 cask "autodesk-fusion360"
-cask "backblaze"
+cask "backblaze" # Backblaze Installer.app
 cask "chatterino"
 cask "cyberduck"
 cask "db-browser-for-sqlite"
@@ -94,6 +94,7 @@ cask "google-chrome"
 cask "google-drive"
 cask "handbrake"
 cask "intellij-idea-ce"
+cask "league-of-legends" # Install League of Legends na.app
 cask "loopback"
 cask "mediainfo"
 cask "minecraft"
