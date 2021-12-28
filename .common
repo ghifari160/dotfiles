@@ -25,6 +25,3 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 
 # asciinema recording
 alias asciirec="ASCIINEMA_REC=1 asciinema rec $@"
-
-# GitHub CLI
-alias gh="hub"
