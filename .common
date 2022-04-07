@@ -23,5 +23,16 @@ fi
 # Dotfiles
 alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 
-# asciinema recording
-alias asciirec="ASCIINEMA_REC=1 asciinema rec $@"
+if [[ $OSTYPE == "darwin"* ]]; then
+    # asciinema recording
+    alias asciirec="ASCIINEMA_REC=1 asciinema rec $@"
+
+    # WiFi Toggle
+    alias wifi="networksetup -setairportpower en0 $@"
+elif [[ $OSTYPE == "linux"* ]]; then
+    # asciinema recording
+    alias asciirec="echo \"alias not configured\""
+
+    # WiFi Toggle
+    alias wifi="echo \"alias not configured\""
+fi
