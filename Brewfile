@@ -117,3 +117,13 @@ cask "ultimaker-cura"
 cask "via"
 cask "visual-studio-code"
 cask "vlc"
+
+# TinyGo
+tap "tinygo-org/tools"
+tap "osx-cross/avr"
+tap "tasanakorn/homebrew-esp32"
+
+brew "tinygo"
+brew "avr-gcc"
+brew "avrdude"
+brew "xtensa-esp32-elf"
