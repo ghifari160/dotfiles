@@ -29,6 +29,10 @@ if [[ $OSTYPE == "darwin"* ]]; then
 
     # WiFi Toggle
     alias wifi="networksetup -setairportpower en0 $@"
+
+    # Sleep Toggle
+    alias sleep-allow="sudo pmset -c sleep 0; sudo pmset -c disablesleep 0; echo Sleep allowed"
+    alias sleep-disallow="sudo pmset -c sleep 0; sudo pmset -c disablesleep 1; echo Sleep disallowed"
 elif [[ $OSTYPE == "linux"* ]]; then
     # asciinema recording
     alias asciirec="echo \"alias not configured\""
