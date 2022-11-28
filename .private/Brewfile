@@ -12,4 +12,4 @@ brew "git-lfs"
 brew "mas"
 
 # Yubico Authenticator
-# mas "Yubico Authenticator", id: 1497506650
+mas "Yubico Authenticator", id: 1497506650

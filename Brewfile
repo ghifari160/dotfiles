@@ -13,7 +13,7 @@ brew "git-lfs"
 brew "mas"
 
 # Yubico Authenticator
-# mas "Yubico Authenticator", id: 1497506650
+mas "Yubico Authenticator", id: 1497506650
 # END Private Brewfile
 
 # Official Tap
@@ -64,19 +64,19 @@ brew "qmk"
 
 # App Store apps
 # Sign in through the App Store
-# mas "Final Cut Pro", id: 424389933
-# mas "RSS Bot", id: 605732865
-# mas "Keynote", id: 409183694
-# mas "Kindle", id: 405399194
-# mas "GarageBand", id: 682658836
-# mas "Motion", id: 434290957
-# mas "Numbers", id: 409203825
-# mas "Xcode", id: 497799835
-# mas "MainStage", id: 634159523
-# mas "Pages", id: 409201541
-# mas "iMovie", id: 408981434
-# mas "Logic Pro", id: 634148309
-# mas "Compressor", id: 424390742
+mas "Final Cut Pro", id: 424389933
+mas "RSS Bot", id: 605732865
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "GarageBand", id: 682658836
+mas "Motion", id: 434290957
+mas "Numbers", id: 409203825
+mas "Xcode", id: 497799835
+mas "MainStage", id: 634159523
+mas "Pages", id: 409201541
+mas "iMovie", id: 408981434
+mas "Logic Pro", id: 634148309
+mas "Compressor", id: 424390742
 
 # Cask Drivers Tap
 tap "homebrew/cask-drivers"
