@@ -118,6 +118,7 @@ cask "ultimaker-cura"
 cask "via"
 cask "visual-studio-code"
 cask "vlc"
+cask "vmware-fusion"
 
 # TinyGo
 tap "tinygo-org/tools"
