@@ -8,6 +8,7 @@ brew "pinentry-mac"
 # Git
 brew "git"
 brew "git-lfs"
+brew "gh"
 
 brew "mas"
 

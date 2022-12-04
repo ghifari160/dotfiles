@@ -9,6 +9,7 @@ brew "pinentry-mac"
 # Git
 brew "git"
 brew "git-lfs"
+brew "gh"
 
 brew "mas"
 
@@ -23,7 +24,6 @@ brew "bat"
 brew "cmake"
 brew "doctl"
 brew "ffmpeg"
-brew "gh"
 brew "gifsicle"
 brew "gist"
 brew "go"
