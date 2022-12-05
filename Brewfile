@@ -11,6 +11,9 @@ brew "git"
 brew "git-lfs"
 brew "gh"
 
+# LastPass
+brew "lastpass-cli"
+
 brew "mas"
 
 # Yubico Authenticator
