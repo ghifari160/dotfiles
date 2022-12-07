@@ -22,6 +22,7 @@ mas "Yubico Authenticator", id: 1497506650
 
 # Official Tap
 brew "adns"
+brew "agg"
 brew "asciinema"
 brew "bat"
 brew "cmake"
