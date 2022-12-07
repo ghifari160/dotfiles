@@ -33,6 +33,9 @@ if [[ $OSTYPE == "darwin"* ]]; then
     # Sleep Toggle
     alias sleep-allow="sudo pmset -c sleep 0; sudo pmset -c disablesleep 0; echo Sleep allowed"
     alias sleep-disallow="sudo pmset -c sleep 0; sudo pmset -c disablesleep 1; echo Sleep disallowed"
+
+    # Clear clipboard
+    alias clearboard="cat /dev/null | pbcopy"
 elif [[ $OSTYPE == "linux"* ]]; then
     # asciinema recording
     alias asciirec="echo \"alias not configured\""
