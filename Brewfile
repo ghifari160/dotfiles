@@ -57,6 +57,10 @@ brew "wget"
 brew "xdotool"
 brew "yarn"
 
+# Tools Tap
+tap "ghifari160/tools"
+brew "ghifari160/tools/migrate"
+
 # MongoDB Tap
 tap "mongodb/brew"
 brew "mongodb/brew/mongodb-community-shell"
