@@ -11,9 +11,6 @@ brew "git"
 brew "git-lfs"
 brew "gh"
 
-# LastPass
-brew "lastpass-cli"
-
 brew "mas"
 
 # Yubico Authenticator
@@ -25,8 +22,14 @@ brew "adns"
 brew "agg"
 brew "asciinema"
 brew "bat"
+brew "bazel"
+brew "bootloadhid"
+brew "clang-format"
 brew "cmake"
+brew "curl"
 brew "doctl"
+brew "dfu-programmer"
+brew "dfu-util"
 brew "ffmpeg"
 brew "gifsicle"
 brew "gist"
@@ -38,13 +41,16 @@ brew "kubernetes-cli"
 brew "linkerd"
 brew "lua"
 brew "luarocks"
+brew "make"
 brew "mbedtls"
 brew "mkcert"
+brew "mockery"
 brew "neofetch"
 brew "node"
 brew "openjdk@8"
 brew "oq"
 brew "p7zip"
+brew "python@3.10"
 brew "qt"
 brew "qt@5"
 brew "rclone"
@@ -52,14 +58,15 @@ brew "rtmpdump"
 brew "s3cmd"
 brew "swig"
 brew "synergy"
+brew "teensy_loader_cli"
 brew "w3m"
 brew "wget"
 brew "xdotool"
 brew "yarn"
+brew "youtube-dl"
 
-# Tools Tap
-tap "ghifari160/tools"
-brew "ghifari160/tools/migrate"
+# Java
+brew "openjdk@17"
 
 # MongoDB Tap
 tap "mongodb/brew"
@@ -68,7 +75,28 @@ brew "mongodb/brew/mongodb-database-tools"
 
 # QMK Tap
 tap "qmk/qmk"
+brew "qmk/qmk/mdloader"
 brew "qmk"
+
+# TinyGo
+tap "tinygo-org/tools"
+tap "osx-cross/avr"
+tap "osx-cross/arm"
+tap "tasanakorn/homebrew-esp32"
+
+brew "tinygo"
+brew "osx-cross/avr/avr-gcc@8"
+brew "osx-cross/arm/arm-gcc-bin@8"
+brew "avrdude"
+brew "xtensa-esp32-elf"
+
+# Tools Tap
+tap "ghifari160/tools"
+brew "ghifari160/tools/migrate"
+
+# Twitch
+tap "twitchdev/twitch"
+brew "twitch-cli"
 
 # App Store apps
 # Sign in through the App Store
@@ -90,6 +118,8 @@ mas "Compressor", id: 424390742
 tap "homebrew/cask-drivers"
 
 # Casks
+tap "homebrew/cask"
+tap "homebrew/services"
 cask "adobe-creative-cloud"
 cask "autodesk-fusion360"
 cask "backblaze" # /usr/local/Caskroom/backblaze/Backblaze Installer.app
@@ -127,13 +157,4 @@ cask "via"
 cask "visual-studio-code"
 cask "vlc"
 cask "vmware-fusion"
-
-# TinyGo
-tap "tinygo-org/tools"
-tap "osx-cross/avr"
-tap "tasanakorn/homebrew-esp32"
-
-brew "tinygo"
-brew "avr-gcc"
-brew "avrdude"
-brew "xtensa-esp32-elf"
+cask "xquartz"
