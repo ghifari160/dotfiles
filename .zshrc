@@ -20,7 +20,11 @@ compinit
 
 # Include .common
 
-. "$HOME/.common"
+if [[ $OSTYPE == "darwin"* ]]; then
+    . "$HOME/.macOS/.zshrc"
+elif [[ $OSTYPE == "linux"* ]]; then
+    . "$HOME/.linux/.zshrc"
+fi
 
 # If recording
 if [[ $ASCIINEMA_REC ]]; then
