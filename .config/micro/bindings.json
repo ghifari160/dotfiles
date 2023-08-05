@@ -1,0 +1,12 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+    "CtrlO": "Save",
+    "CtrlR": "OpenFile",
+    "CtrlY": "PageUp",
+    "CtrlV": "PageDown",
+    "CtrlK": "CutLine",
+    "CtrlU": "Paste",
+    "CtrlX": "Quit",
+    "CtrlW": "Find"
+}

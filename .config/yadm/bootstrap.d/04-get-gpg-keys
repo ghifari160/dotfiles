@@ -1,0 +1,46 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+rm_temps=()
+
+function saveKey {
+    local -a keyid=$1
+    local -a rawkey=$2
+    local -a keyfile="$(mktemp)"
+
+    log "Saving $keyid to $keyfile"
+    echo "$rawkey" > "$keyfile"
+
+    log "Importing $keyid"
+    gpg --import "$keyfile"
+
+    rm_temps+=("$keyfile")
+}
+
+log "Acquiring GPG keys from GitHub"
+
+resp=$(mktemp)
+rm_temps=("$resp")
+
+gh api \
+    -H "Accept: application/vnd.github+json" \
+    -H "X-GitHub-Api-Version: 2022-11-28" \
+    /user/gpg_keys > "$resp"
+
+save_ifs=$IFS
+IFS=$'\n'
+
+for key in $(cat "$resp" | oq -c ".[] | {key_id, raw_key}"); do
+    _oq() {
+        echo ${key} | oq -r "${1}"
+    }
+
+    saveKey $(_oq ".key_id") "$(_oq '.raw_key')"
+done
+
+log "Cleaning downloaded keys"
+IFS=$'\s'
+rm -f ${rm_temps[@]}
+
+IFS=$save_ifs

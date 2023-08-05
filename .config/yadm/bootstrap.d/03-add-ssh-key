@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+log "Adding SSH key to GitHub"
+gh ssh-key add "$HOME/.ssh/id_ed25519.pub" --title "$MACHINE"

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $(uname) != "Darwin" ]]; then
+    echo "Only implemented on macOS!"
+    exit 1
+fi
+
 function help {
     echo "Toggle macOS sleep prevention."
     echo

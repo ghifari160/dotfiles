@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+log "Increasing open file soft limit"
+ulimit -n "$(ulimit -Hn)"
+log "Open file soft limit is now $(ulimit -Sn)"
+
+log "Installing main Brewfile"
+brew bundle install --global

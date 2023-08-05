@@ -1,0 +1,112 @@
+#!/bin/bash
+
+if [ -z "${BASH_VERSION:-}" ]
+then
+    printf "%s\n" "Bash is required to interpret this script"
+    exit 1
+fi
+
+if [[ -t 1 ]]; then
+    function tty_escape {
+        printf "\033[%sm" "$1"
+    }
+else
+    function tty_escape {
+        :
+    }
+fi
+
+tty_red="$(tty_escape 31)"
+tty_blue="$(tty_escape 34)"
+tty_reset="$(tty_escape 0)"
+
+function abort {
+    printf "${tty_red}%s${tty_reset}\n" "$@" >&2
+    exit 1
+}
+
+function log {
+    printf "${tty_blue}%s${tty_reset}\n" "$@"
+}
+
+function warn {
+    printf "${tty_red}%s${tty_reset}\n" "$@"
+}
+
+function isMac {
+    [[ $(uname) == "Darwin" ]]
+}
+
+function isLinux {
+    [[ $(uname) == "Linux" ]]
+}
+
+function isUbuntu {
+    isLinux && lsb_release -d | grep -q "Ubuntu"
+}
+
+function sudo_init {
+    local SUDO_PASSWORD
+    local PASSWORD_SCRIPT
+
+    if ! sudo -v -n &> /dev/null; then
+        while :; do
+            read -rsp "Sudo password: " SUDO_PASSWORD
+            echo
+
+            if sudo -v -S 2>/dev/null <<< "$SUDO_PASSWORD"; then
+                break
+            fi
+
+            unset SUDO_PASSWORD
+            echo "Invalid password!" >&2
+        done
+
+
+        PASSWORD_SCRIPT="$(
+            cat << EOS
+#!/bin/bash
+echo "$SUDO_PASSWORD"
+EOS
+        )"
+        unset SUDO_PASSWORD
+
+        log "Caching sudo password"
+
+        set -x
+        SUDO_ASKPASS="$(mktemp)"
+        chmod 700 "$SUDO_ASKPASS"
+        bash -c "cat > '$SUDO_ASKPASS'" <<< "$PASSWORD_SCRIPT"
+        unset PASSWORD_SCRIPT
+        export SUDO_ASKPASS
+        set +x
+    fi
+}
+
+function sudo_refresh {
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        sudo -A -v
+    else
+        sudo_init
+    fi
+}
+
+function sudo_askpass {
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        sudo -A "$@"
+    else
+        sudo "$@"
+    fi
+}
+
+function sudo_release {
+    log "Releasing sudo ticket"
+
+    set -x
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        rm -f "$SUDO_ASKPASS"
+    fi
+    sudo -k
+    unset SUDO_ASKPASS
+    set +x
+}

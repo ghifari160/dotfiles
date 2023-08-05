@@ -1,0 +1,28 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+set -euo pipefail
+
+BOOTSTRAP="${BASH_SOURCE[0]}.d"
+
+if [[ ! -d "$BOOTSTRAP" ]]; then
+    abort "Missing bootstrap directory!"
+fi
+
+if ! command -v "go" > /dev/null; then
+    log "Downloading and installing Go"
+    brew install go
+fi
+
+log "Building bootstrapper"
+cwd="$PWD"
+cd "$HOME/bootstrapper"
+go build -o "$HOME/.config/yadm/bootstrapper" .
+cd "$cwd"
+unset cwd
+
+log "Executing bootstrapper"
+BOOTSTRAP_DIR="$HOME/.config/yadm/bootstrap.d" "$HOME/.config/yadm/bootstrapper"
+
+log "Done with bootstrap"

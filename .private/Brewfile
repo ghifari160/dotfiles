@@ -1,16 +1,20 @@
+# Essentials Brewfile
+# This is the bare minimum needed to begin provisioning a new device.
+
 # YubiKey Manager
 brew "ykman"
 
 # GPG
 brew "gnupg"
-brew "pinentry-mac"
 
 # Git
 brew "git"
-brew "git-lfs"
+
+# GitHub CLI
 brew "gh"
 
-brew "mas"
+# Yet Another Dotfiles Manager (YADM)
+brew "yadm"
 
-# Yubico Authenticator
-mas "Yubico Authenticator", id: 1497506650
+# ZSH
+brew "zsh"
