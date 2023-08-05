@@ -27,6 +27,9 @@ brew "linkerd"
 brew "lua"
 brew "luarocks"
 brew "make"
+{% if yadm.os == "Darwin" %}
+brew "mas"
+{% endif %}
 brew "mbedtls"
 brew "mkcert"
 brew "mockery"
