@@ -29,6 +29,9 @@ if [[ $system_type = "Darwin" ]]; then
     # asciinema recording
     alias asciirec="ASCIINEMA_REC=1 asciinema rec $@"
 
+    # Flush DNS
+    alias flush-dns="echo \"Flushing DNS\"; sudo killall -HUP mDNSResponder; echo \"DNS Flushed!\""
+
     # WiFi Toggle
     alias wifi="networksetup -setairportpower en0 $@"
 
