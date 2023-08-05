@@ -18,7 +18,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-system_type = $(uname -s)
+system_type=$(uname -s)
 
 # If recording
 if [[ $ASCIINEMA_REC ]]; then
