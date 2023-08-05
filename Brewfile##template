@@ -34,6 +34,11 @@ brew "neofetch"                                 # Fast, highly customisable syst
 brew "node"                                     # Platform built on V8 to build network applications
 brew "oq"                                       # Performant, and portable jq wrapper to support formats other than JSON
 brew "pandoc"                                   # Swiss-army knife of markup format conversion
+{% if yadm.os == "Darwin" %}
+brew "pinentry-mac"
+{% else %}
+brew "pinentry"
+{% endif %}
 brew "p7zip"                                    # 7-Zip (high compression file archiver) implementation
 brew "python@3.10"                              # Interpreted, interactive, object-oriented programming language
 brew "qt"                                       # Cross-platform application and UI framework
@@ -69,7 +74,6 @@ brew "ghifari160/tools/migrate"                 # Migrate is a file migration to
 # Twitch
 tap "twitchdev/twitch"                          # Twitchdev Homebrew tap
 brew "twitchdev/twitch/twitch-cli"              # CLI for Twitch's developer offerings
-
 
 # BEGIN Embedded programming
 brew "bootloadhid"                              # HID-based USB bootloader for AVR microcontrollers

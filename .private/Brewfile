@@ -6,7 +6,6 @@ brew "ykman"
 
 # GPG
 brew "gnupg"
-brew "pinentry-mac"
 
 # Git
 brew "git"
