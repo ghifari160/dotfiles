@@ -1,20 +1,5 @@
 # BEGIN Private Brewfile
-# YubiKey Manager
-brew "ykman"
-
-# GPG
-brew "gnupg"
-brew "pinentry-mac"
-
-# Git
-brew "git"
-brew "git-lfs"
-brew "gh"
-
-brew "mas"
-
-# Yubico Authenticator
-mas "Yubico Authenticator", id: 1497506650
+{% include ".private/Brewfile" %}
 # END Private Brewfile
 
 # Official Tap
@@ -100,6 +85,7 @@ brew "twitch-cli"
 
 # App Store apps
 # Sign in through the App Store
+mas "Yubico Authenticator", id: 1497506650
 mas "Final Cut Pro", id: 424389933
 mas "RSS Bot", id: 605732865
 mas "Keynote", id: 409183694
