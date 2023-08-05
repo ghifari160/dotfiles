@@ -10,13 +10,9 @@
 	graph = log --all --decorate --oneline --graph
 [core]
 	editor = code --wait
-[hub]
-	protocol = https
 [commit]
 	gpgSign = true
 [tag]
 	forceSignAnnotated = true
-[url "git@github.com:"]
-	insteadOf = "https://github.com/"
 [init]
 	defaultBranch = main
