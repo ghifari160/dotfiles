@@ -47,7 +47,7 @@ brew "w3m"                                      # Pager/text based browser
 brew "wget"                                     # Internet file retriever
 brew "xdotool"                                  # Fake keyboard/mouse input and window management for X
 brew "yarn"                                     # JavaScript package manager
-brew "youtube-dl"                               # Download YouTube videos from the command-line
+brew "yt-dlp"                                   # Fork of youtube-dl with additional features and fixes
 
 # Java
 brew "openjdk@8"                                # Development kit for the Java programming language
