@@ -13,3 +13,6 @@ brew "git"
 
 # GitHub CLI
 brew "gh"
+
+# Yet Another Dotfiles Manager (YADM)
+brew "yadm"
