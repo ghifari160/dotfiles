@@ -1,5 +1,0 @@
-#!/bin/bash
-
-go test -v -coverprofile=coverage $1
-go tool cover -html=coverage
-rm coverage
