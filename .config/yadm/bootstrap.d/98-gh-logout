@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+log "Logging out of GitHub CLI"
+gh auth logout --hostname github.com

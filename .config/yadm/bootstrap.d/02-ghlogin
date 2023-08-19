@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+log "Configuring GitHub CLI"
+echo "$TOKEN" | gh auth login --with-token

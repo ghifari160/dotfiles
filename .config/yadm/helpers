@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ -z "${BASH_VERSION:-}" ]
+then
+    printf "%s\n" "Bash is required to interpret this script"
+    exit 1
+fi
+
+if [[ -t 1 ]]; then
+    function tty_escape {
+        printf "\033[%sm" "$1"
+    }
+else
+    function tty_escape {
+        :
+    }
+fi
+
+tty_red="$(tty_escape 31)"
+tty_blue="$(tty_escape 34)"
+tty_reset="$(tty_escape 0)"
+
+function abort {
+    printf "${tty_red}%s${tty_reset}\n" "$@" >&2
+    exit 1
+}
+
+function log {
+    printf "${tty_blue}%s${tty_reset}\n" "$@"
+}

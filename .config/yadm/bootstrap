@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# DO NOT CALL DIRECTLY.
+# USE setup.sh!
+
+source "$HOME/.config/yadm/helpers"
+
+set -Eeo pipefail
+
+BOOTSTRAP="${BASH_SOURCE[0]}.d"
+
+if [[ ! -d "$BOOTSTRAP" ]]; then
+    abort "Missing bootstrap directory!"
+fi
+
+find -L "$BOOTSTRAP" -type f | sort | while IFS= read -r bootstrap; do
+    if [[ -x "$bootstrap" && ! "$bootstrap" =~ "##" && ! "$bootstrap" =~ "~$" ]]; then
+        if ! "$bootstrap"; then
+            abort "Bootstrap '$bootstrap' failed"
+        fi
+    fi
+done
