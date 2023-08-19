@@ -43,13 +43,13 @@ if [[ $system_type = "Darwin" ]]; then
 fi
 
 # Go
-if [[ $(which go) ]]; then
+if type "go" > /dev/null; then
     export GOPATH=$(go env GOPATH)
     export PATH=$GOPATH/bin:$PATH
 fi
 
 # Kubectl
-if [[ $(which kubectl) ]]; then
+if type "kubectl" > /dev/null; then
     export KUBE_EDITOR="code -w"
     if [[ -n $ZSH_VERSION ]]; then
         [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
@@ -57,7 +57,7 @@ if [[ $(which kubectl) ]]; then
 fi
 
 # OpenJDK 17
-if [[ $(which javac) ]]; then
+if type "javac" > /dev/null; then
     export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
     export JAVA_HOME="$(dirname $(dirname $(realpath $(which javac))))"
 fi
