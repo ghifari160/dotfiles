@@ -28,3 +28,73 @@ function abort {
 function log {
     printf "${tty_blue}%s${tty_reset}\n" "$@"
 }
+
+function warn {
+    printf "${tty_red}%s${tty_reset}\n" "$@"
+}
+
+function sudo_init {
+    local SUDO_PASSWORD
+    local PASSWORD_SCRIPT
+
+    if ! sudo -v -n &> /dev/null; then
+        while :; do
+            read -rsp "Sudo password: " SUDO_PASSWORD
+            echo
+
+            if sudo -v -S 2>/dev/null <<< "$SUDO_PASSWORD"; then
+                break
+            fi
+
+            unset SUDO_PASSWORD
+            echo "Invalid password!" >&2
+        done
+
+
+        PASSWORD_SCRIPT="$(
+            cat << EOS
+#!/bin/bash
+echo "$SUDO_PASSWORD"
+EOS
+        )"
+        unset SUDO_PASSWORD
+
+        log "Caching sudo password"
+
+        set -x
+        SUDO_ASKPASS="$(mktemp)"
+        chmod 700 "$SUDO_ASKPASS"
+        bash -c "cat > '$SUDO_ASKPASS'" <<< "$PASSWORD_SCRIPT"
+        unset PASSWORD_SCRIPT
+        export SUDO_ASKPASS
+        set +x
+    fi
+}
+
+function sudo_refresh {
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        sudo -A -v
+    else
+        sudo_init
+    fi
+}
+
+function sudo_askpass {
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        sudo -A "$@"
+    else
+        sudo "$@"
+    fi
+}
+
+function sudo_release {
+    log "Releasing sudo ticket"
+
+    set -x
+    if [[ -f "$SUDO_ASKPASS" ]]; then
+        rm -f "$SUDO_ASKPASS"
+    fi
+    sudo -k
+    unset SUDO_ASKPASS
+    set +x
+}
