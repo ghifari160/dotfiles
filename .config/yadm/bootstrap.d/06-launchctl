@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source "$HOME/.config/yadm/helpers"
+
+if isMac; then
+    log "Adding Homebrew paths to launchctl"
+    sudo launchctl config user path "$(brew --prefix)/bin:${PATH}"
+fi

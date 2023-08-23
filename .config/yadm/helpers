@@ -33,6 +33,18 @@ function warn {
     printf "${tty_red}%s${tty_reset}\n" "$@"
 }
 
+function isMac {
+    [[ $(uname) == "Darwin" ]]
+}
+
+function isLinux {
+    [[ $(uname) == "Linux" ]]
+}
+
+function isUbuntu {
+    isLinux && lsb_release -d | grep -q "Ubuntu"
+}
+
 function sudo_init {
     local SUDO_PASSWORD
     local PASSWORD_SCRIPT
