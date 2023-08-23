@@ -2,6 +2,4 @@ export CLICOLOR=1
 
 {% include .private/gpg_config %}
 
-{% if yadm.os == "Linux" %}
-{% include .private/linuxbrew_config %}
-{% endif %}
+{% include .private/brew_config %}

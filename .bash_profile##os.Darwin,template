@@ -2,4 +2,6 @@ export CLICOLOR=1
 
 {% include .private/gpg_config %}
 
+{% include .private/brew_config %}
+
 export PS1="\W \u\$ "
