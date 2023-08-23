@@ -36,7 +36,7 @@ if [[ $system_type = "Darwin" ]]; then
     alias wifi="networksetup -setairportpower en0 $@"
 
     # Sleep Toggle
-    alias sleepctl="$HOME/.macOS/sleepctl.sh $@"
+    alias sleepctl="$HOME/bin/sleepctl.sh $@"
 
     # Clear Clipboard
     alias clearboard="cat /dev/null | pbcopy"
