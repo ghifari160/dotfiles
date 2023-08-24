@@ -131,6 +131,7 @@ cask "google-chrome"                                    # Web browser
 cask "google-drive"                                     # Client for the Google Drive storage service
 cask "handbrake"                                        # Open-source video transcoder available for Linux, Mac, and Windows
 cask "intellij-idea-ce"                                 # IDE for Java development - community edition
+cask "iterm2"                                           # Terminal emulator as alternative to Apple's Terminal app
 cask "league-of-legends"                                # Multiplayer online battle arena game. `open /usr/local/Caskroom/league-of-legends/Install League of Legends na.app`
 cask "loopback"                                         # Cable-free audio router
 cask "mediainfo"                                        # Display technical and tag data for video and audio files
