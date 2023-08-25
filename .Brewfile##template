@@ -64,6 +64,7 @@ brew "mongodb/brew/mongodb-database-tools"              # This package contains 
 
 # Tools Tap
 tap "ghifari160/tools"                                  # GHIFARI160 Homebrew tap
+brew "ghifari160/tools/medhash-tools"                   # Simple tools for verifying media file integrity
 brew "ghifari160/tools/migrate"                         # Migrate is a file migration tool
 
 # Twitch
