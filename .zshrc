@@ -61,3 +61,8 @@ if type "javac" > /dev/null; then
     export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
     export JAVA_HOME="$(dirname $(dirname $(realpath $(which javac))))"
 fi
+
+# Intellij IDEA
+if test -d "/Applications/IntelliJ IDEA CE.app/Contents/MacOS"; then
+    export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
+fi
