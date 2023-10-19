@@ -14,6 +14,7 @@ brew "curl"                                             # Get a file from an HTT
 brew "doctl"                                            # Command-line tool for DigitalOcean
 brew "ffmpeg"                                           # Play, record, convert, and stream audio and video
 brew "gifsicle"                                         # GIF image/animation creator/editor
+brew "git-absorb"                                       # Automatic git commit --fixup
 brew "git-lfs"                                          # Git extension for versioning large files
 brew "go"                                               # Open source programming language to build simple/reliable/efficient software
 brew "gptfdisk"                                         # Text-mode partitioning tools
@@ -80,7 +81,7 @@ brew "teensy_loader_cli"                                # Command-line integrati
 # QMK Tap
 tap "qmk/qmk" if OS.mac?                                # QMK Homebrew tap
 brew "qmk/qmk/mdloader" if OS.mac?                      # Massdrop Firmware Loader
-# QMK's runtime dependencies cannot be retrieved in bundle.
+# QMK's runtime dependencies cannot be retrieved in bundle
 # brew "qmk/qmk/qmk" if OS.mac?                           # Quantum Mechanical Keyboard (QMK) Firmware
 
 # TinyGo
@@ -114,21 +115,21 @@ mas "Logic Pro", id: 634148309                          # Music production
 mas "Compressor", id: 424390742                         # Video encoding
 
 # Casks
-# Adobe Creative Cloud prompts for sudo password.
+# Adobe Creative Cloud prompts for sudo password
 cask "adobe-creative-cloud"                             # Collection of apps and services for photography, design, video, web, and UX
 cask "autodesk-fusion360"                               # Integrated CAD, CAM, CAE, and PCB software
 cask "backblaze"                                        # Data backup and storage service. `open /usr/local/Caskroom/backblaze/Backblaze Installer.app`
-cask "chatterino"                                       # Chat client for https://twitch.tv
+cask "chatterino"                                       # Chat client for <https://twitch.tv>
 cask "cyberduck"                                        # Server and cloud storage browser
 cask "db-browser-for-sqlite"                            # Browser for SQLite databases
 cask "discord"                                          # Voice and text chat software
 cask "disk-inventory-x"                                 # Disk usage utility
 cask "docker"                                           # Pack, ship and run any application as a lightweight container
-# Elgato Thunderbolt Dock is a discontinued product.
-# Add cask to a personal tap.
+# Elgato Thunderbolt Dock is a discontinued product
+# Add cask to a personal tap
 # cask "elgato-thunderbolt-dock"
 cask "google-chrome"                                    # Web browser
-# Google Drive prompts for sudo password.
+# Google Drive prompts for sudo password
 cask "google-drive"                                     # Client for the Google Drive storage service
 cask "handbrake"                                        # Open-source video transcoder available for Linux, Mac, and Windows
 cask "intellij-idea-ce"                                 # IDE for Java development - community edition
@@ -154,6 +155,6 @@ cask "ultimaker-cura"                                   # 3D printer and slicing
 cask "via"                                              # Keyboard configurator
 cask "visual-studio-code"                               # Open-source code editor
 cask "vlc"                                              # Multimedia player
-# VMWare Fusion prompts for sudo password.
+# VMWare Fusion prompts for sudo password
 cask "vmware-fusion"                                    # VMware Fusion
 cask "xquartz"                                          # Open-source version of the X.Org X Window System
