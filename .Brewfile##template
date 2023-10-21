@@ -138,6 +138,7 @@ cask "league-of-legends"                                # Multiplayer online bat
 cask "loopback"                                         # Cable-free audio router
 cask "mediainfo"                                        # Display technical and tag data for video and audio files
 cask "minecraft"                                        # Sandbox construction video game
+cask "notion"                                           # App to write, plan, collaborate, and get organized
 cask "obs"                                              # Open-source software for live streaming and screen recording
 cask "obs-ndi"                                          # NewTek NDI integration for OBS studio
 cask "parsec"                                           # Remote desktop
