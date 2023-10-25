@@ -2,6 +2,9 @@
 {% include ".private/Brewfile" %}
 # END Private Brewfile
 
+# Commands
+tap "homebrew/services"                                 # Manage background services using the daemon manager `launchctl` on macOS or `systemctl` on Linux
+
 # Official Tap
 brew "act"                                              # Run your GitHub Actions locally
 brew "agg"                                              # Asciicast to GIF converter
