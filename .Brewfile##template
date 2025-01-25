@@ -45,6 +45,7 @@ brew "qt@5"                                             # Cross-platform applica
 brew "rclone"                                           # Rsync for cloud storage
 brew "rtmpdump"                                         # Tool for downloading RTMP streaming media
 brew "s3cmd"                                            # Command-line tool for the Amazon S3 service
+brew "step"                                             # Easy-to-use CLI tool for building, operating, and automating Public Key Infrastructure (PKI)
 brew "swig"                                             # Generate scripting interfaces to C/C++ code
 brew "synergy-core"                                     # Synergy, the keyboard and mouse sharing tool
 brew "w3m"                                              # Pager/text based browser
