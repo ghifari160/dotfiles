@@ -34,7 +34,7 @@ brew "micro"                                            # Modern and intuitive t
 brew "mkcert"                                           # Simple tool to make locally trusted development certificates
 brew "mockery"                                          # Mock code autogenerator for Golang
 brew "neofetch"                                         # Fast, highly customisable system info script
-brew "node"                                             # Platform built on V8 to build network applications
+brew "nodenv"                                           # Node.js version manager
 brew "oq"                                               # Performant, and portable jq wrapper to support formats other than JSON
 brew "pandoc"                                           # Swiss-army knife of markup format conversion
 brew "pinentry-mac" if OS.mac?                          # Pinentry for GPG on Mac
