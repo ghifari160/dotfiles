@@ -50,6 +50,7 @@ brew "s3cmd"                                            # Command-line tool for 
 brew "step"                                             # Easy-to-use CLI tool for building, operating, and automating Public Key Infrastructure (PKI)
 brew "swig"                                             # Generate scripting interfaces to C/C++ code
 brew "synergy-core"                                     # Synergy, the keyboard and mouse sharing tool
+brew "svn"                                              # Version control system desgiedn to be a better CVS
 brew "w3m"                                              # Pager/text based browser
 brew "wget"                                             # Internet file retriever
 brew "xdotool"                                          # Fake keyboard/mouse input and window management for X
