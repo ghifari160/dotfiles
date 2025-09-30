@@ -56,13 +56,17 @@ if type "kubectl" > /dev/null; then
     fi
 fi
 
-# OpenJDK 17
-if type "javac" > /dev/null; then
-    export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-    export JAVA_HOME="$(dirname $(dirname $(realpath $(which javac))))"
+# jEnv
+if type "jenv" > /dev/null; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
 fi
 
 # Intellij IDEA
 if test -d "/Applications/IntelliJ IDEA CE.app/Contents/MacOS"; then
     export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

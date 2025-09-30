@@ -22,6 +22,7 @@ brew "git-lfs"                                          # Git extension for vers
 brew "go"                                               # Open source programming language to build simple/reliable/efficient software
 brew "gptfdisk"                                         # Text-mode partitioning tools
 brew "graphviz"                                         # Graph visualization software from AT&T and Bell Labs
+brew "jenv"                                             # Java environment manager
 brew "kubernetes-cli"                                   # Kubernetes command-line interface
 brew "linkerd"                                          # Command-line utility to interact with linkerd
 brew "lua"                                              # Powerful, lightweight programming language
@@ -55,8 +56,9 @@ brew "yarn"                                             # JavaScript package man
 brew "yt-dlp"                                           # Fork of youtube-dl with additional features and fixes
 
 # Java
-brew "openjdk@8"                                        # Development kit for the Java programming language
-brew "openjdk@17"                                       # Development kit for the Java programming language
+brew "openjdk@8"                                        # Java JDK 8
+brew "openjdk@17"                                       # Java JDK 17
+brew "openjdk@21"                                       # Java JDK 21
 
 # HashiCorp Tap
 tap "hashicorp/tap"                                     # HashiCorp Homebrew tap
