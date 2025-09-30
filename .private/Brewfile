@@ -13,6 +13,9 @@ brew "git"
 # GitHub CLI
 brew "gh"
 
+# Minisign
+brew "minisign"
+
 # Yet Another Dotfiles Manager (YADM)
 brew "yadm"
 
