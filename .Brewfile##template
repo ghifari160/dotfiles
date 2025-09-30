@@ -40,7 +40,8 @@ brew "pandoc"                                           # Swiss-army knife of ma
 brew "pinentry-mac" if OS.mac?                          # Pinentry for GPG on Mac
 brew "pinentry" if OS.linux?                            # Passphrase entry dialog utilizing the Assuan protocol
 brew "p7zip"                                            # 7-Zip (high compression file archiver) implementation
-brew "python@3.10"                                      # Interpreted, interactive, object-oriented programming language
+brew "python@3.13"                                      # Interpreted, interactive, object-oriented programming language
+brew "pv"                                               # Monitor data's progress through a pipe.
 brew "qt"                                               # Cross-platform application and UI framework
 brew "qt@5"                                             # Cross-platform application and UI framework
 brew "rclone"                                           # Rsync for cloud storage
@@ -130,33 +131,33 @@ cask "cyberduck"                                        # Server and cloud stora
 cask "db-browser-for-sqlite"                            # Browser for SQLite databases
 cask "discord"                                          # Voice and text chat software
 cask "disk-inventory-x"                                 # Disk usage utility
-cask "docker"                                           # Pack, ship and run any application as a lightweight container
+cask "docker-desktop"                                   # Pack, ship and run any application as a lightweight container
 # Elgato Thunderbolt Dock is a discontinued product
 # Add cask to a personal tap
 # cask "elgato-thunderbolt-dock"
 cask "google-chrome"                                    # Web browser
 # Google Drive prompts for sudo password
 cask "google-drive"                                     # Client for the Google Drive storage service
-cask "handbrake"                                        # Open-source video transcoder available for Linux, Mac, and Windows
+cask "handbrake-app"                                    # Open-source video transcoder available for Linux, Mac, and Windows
 cask "intellij-idea-ce"                                 # IDE for Java development - community edition
 cask "iterm2"                                           # Terminal emulator as alternative to Apple's Terminal app
 cask "league-of-legends"                                # Multiplayer online battle arena game. `open /usr/local/Caskroom/league-of-legends/Install League of Legends na.app`
 cask "loopback"                                         # Cable-free audio router
 cask "mediainfo"                                        # Display technical and tag data for video and audio files
-cask "minecraft"                                        # Sandbox construction video game
+cask "modrinth"                                         # Minecraft launcher
 cask "notion"                                           # App to write, plan, collaborate, and get organized
+cask "ngrok"                                            # Reverse proxy, secure introspectable tunnels to localhost
 cask "obs"                                              # Open-source software for live streaming and screen recording
 cask "obs-ndi"                                          # NewTek NDI integration for OBS studio
 cask "parsec"                                           # Remote desktop
 cask "postman"                                          # Collaboration platform for API development
-cask "prismlauncher"                                    # Minecraft launcher
 cask "prusaslicer"                                      # G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)
 cask "qlab"                                             # Sound, video and lighting control
 cask "qmk-toolbox"                                      # Toolbox companion for QMK Firmware
 cask "raspberry-pi-imager"                              # Imaging utility to install operating systems to a microSD card
 cask "spotify"                                          # Music streaming service
 cask "steam"                                            # Video game digital distribution service
-cask "syncthing"                                        # Open source continuous file synchronization application
+cask "syncthing-app"                                    # Open source continuous file synchronization application
 cask "tg-pro"                                           # Temperature monitoring, fan control and diagnostics
 cask "ultimaker-cura"                                   # 3D printer and slicing GUI
 cask "via"                                              # Keyboard configurator
